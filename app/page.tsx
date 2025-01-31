@@ -1,5 +1,4 @@
 "use client";
-
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useAtom } from "jotai";
 import {
@@ -18,8 +17,7 @@ import {
 } from "@solana/web3.js"; // Import the necessary Solana SDK components
 import { Program, AnchorProvider, Idl, web3 } from "@project-serum/anchor";
 import * as spl from "@solana/spl-token";
-import { BN } from "bn.js"; // Import BN class as a value
-// import IDLJson from "@/idl/spl_transfer.json";
+import { BN } from "bn.js";
 import IDLJson from "@/idl/token_transfer.json";
 
 const PROGRAM_ID = "7jnSQqiycxtGL9LpmFhdph6ytjcCtDxSFjtdUbMRnmWp";
@@ -79,6 +77,7 @@ export default function Home() {
         PROGRAM_ID,
         provider
       );
+      
       console.log("here-->1");
 
       const transferIx = await program.methods
