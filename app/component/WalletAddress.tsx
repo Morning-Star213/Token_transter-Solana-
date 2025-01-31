@@ -33,6 +33,7 @@ const fetchBalance=async(public_key:string)=>{
         setSplBalance(0)
     }
 }
+
 const WalletAddress = () => {
     const { publicKey, connected } = useWallet();
   if (connected){
