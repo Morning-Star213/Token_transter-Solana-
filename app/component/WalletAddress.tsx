@@ -3,6 +3,7 @@ import { useAtom } from 'jotai';
 import { useWallet } from "@solana/wallet-adapter-react";
 import { Connection, PublicKey } from '@solana/web3.js';
 import { solbalanceAtom,splbalanceAtom,mintAddrAtom, walletAtom } from "../store/atom";
+
 const DEVNET_ENDPOINT = 'https://api.devnet.solana.com';
 
 const fetchBalance=async(public_key:string)=>{
@@ -23,7 +24,6 @@ const fetchBalance=async(public_key:string)=>{
         publicKey,
         { mint: mintAddress }
     );
-
     // Fetch the token account info
     if (tokenAccounts.value.length > 0) {
         const balance =

@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useMemo } from "react";
 import {
   ConnectionProvider,
@@ -14,7 +13,6 @@ import {
 } from "@solana/wallet-adapter-wallets";
 import "@solana/wallet-adapter-react-ui/styles.css";
 import WalletAddress from "./WalletAddress";
-
 
 export default function AppWalletProvider({
   children

@@ -77,8 +77,6 @@ export default function Home() {
         PROGRAM_ID,
         provider
       );
-      
-      console.log("here-->1");
 
       const transferIx = await program.methods
         .transferToken2022(new BN(10000000000))
